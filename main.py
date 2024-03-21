@@ -6,6 +6,11 @@ def encode(message):
         encoded_message += str((int(char) + 3) % 10)
     return encoded_message
 
+def decode(encoded_message):
+    decoded_message = ""
+    for char in encoded_message:
+        decoded_message += str((int(char) - 3) % 10)
+    return decoded_message
 
 def main():
     while True:
